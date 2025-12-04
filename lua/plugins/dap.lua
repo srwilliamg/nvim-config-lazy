@@ -1,3 +1,4 @@
+local desc = Utils.plugin_keymap_desc("DAP")
 return {
   {
     "mfussenegger/nvim-dap",
@@ -16,154 +17,154 @@ return {
         function()
           require("dap").toggle_breakpoint()
         end,
-        desc = "toggle [d]ebug [b]reakpoint",
+        desc = desc("toggle [d]ebug [b]reakpoint"),
       },
       {
         "<leader>dB",
         function()
           require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
         end,
-        desc = "[d]ebug [B]reakpoint",
+        desc = desc("[d]ebug [B]reakpoint"),
       },
       {
         "<leader>dc",
         function()
           require("dap").continue()
         end,
-        desc = "[d]ebug [c]ontinue (start here)",
+        desc = desc("[d]ebug [c]ontinue (start here)"),
       },
       {
         "<leader>dC",
         function()
           require("dap").run_to_cursor()
         end,
-        desc = "[d]ebug [C]ursor",
+        desc = desc("[d]ebug [C]ursor"),
       },
       {
         "<leader>dg",
         function()
           require("dap").goto_()
         end,
-        desc = "[d]ebug [g]o to line",
+        desc = desc("[d]ebug [g]o to line"),
       },
       {
         "<leader>do",
         function()
           require("dap").step_over()
         end,
-        desc = "[d]ebug step [o]ver",
+        desc = desc("[d]ebug step [o]ver"),
       },
       {
         "<leader>dO",
         function()
           require("dap").step_out()
         end,
-        desc = "[d]ebug step [O]ut",
+        desc = desc("[d]ebug step [O]ut"),
       },
       {
         "<leader>di",
         function()
           require("dap").step_into()
         end,
-        desc = "[d]ebug [i]nto",
+        desc = desc("[d]ebug [i]nto"),
       },
       {
         "<leader>dj",
         function()
           require("dap").down()
         end,
-        desc = "[d]ebug [j]ump down",
+        desc = desc("[d]ebug [j]ump down"),
       },
       {
         "<leader>dk",
         function()
           require("dap").up()
         end,
-        desc = "[d]ebug [k]ump up",
+        desc = desc("[d]ebug [k]ump up"),
       },
       {
         "<leader>dl",
         function()
           require("dap").run_last()
         end,
-        desc = "[d]ebug [l]ast",
+        desc = desc("[d]ebug [l]ast"),
       },
       {
         "<leader>dp",
         function()
           require("dap").pause()
         end,
-        desc = "[d]ebug [p]ause",
+        desc = desc("[d]ebug [p]ause"),
       },
       {
         "<leader>dr",
         function()
           require("dap").repl.toggle()
         end,
-        desc = "[d]ebug [r]epl",
+        desc = desc("[d]ebug [r]epl"),
       },
       {
         "<leader>dR",
         function()
           require("dap").clear_breakpoints()
         end,
-        desc = "[d]ebug [R]emove breakpoints",
+        desc = desc("[d]ebug [R]emove breakpoints"),
       },
       {
         "<leader>ds",
         function()
           require("dap").session()
         end,
-        desc = "[d]ebug [s]ession",
+        desc = desc("[d]ebug [s]ession"),
       },
       {
         "<leader>dt",
         function()
           require("dap").terminate()
         end,
-        desc = "[d]ebug [t]erminate",
+        desc = desc("[d]ebug [t]erminate"),
       },
       {
         "<leader>dw",
         function()
           require("dap.ui.widgets").hover()
         end,
-        desc = "[d]ebug [w]idgets",
+        desc = desc("[d]ebug [w]idgets"),
       },
       {
         "<F5>",
         function()
           require("dap").continue()
         end,
-        desc = "Debug: Continue",
+        desc = desc("Debug: Continue"),
       },
       {
         "<F10>",
         function()
           require("dap").step_over()
         end,
-        { desc = "Debug: Step Over" },
+        { desc = desc("Debug: Step Over") },
       },
       {
         "<F11>",
         function()
           require("dap").step_into()
         end,
-        { desc = "Debug: Step Into" },
+        { desc = desc("Debug: Step Into") },
       },
       {
         "<F12>",
         function()
           require("dap").step_out()
         end,
-        { desc = "Debug: Step Out" },
+        { desc = desc("Debug: Step Out") },
       },
       {
         "<leader>b",
         function()
           require("dap").toggle_breakpoint()
         end,
-        { desc = "Debug: Toggle Breakpoint" },
+        { desc = desc("Debug: Toggle Breakpoint") },
       },
     },
     config = function()

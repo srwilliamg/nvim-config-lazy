@@ -146,9 +146,9 @@ return {
       group = format_sync_grp,
     })
 
-    vim.keymap.set("n", "<leader>tc", ":GoTest -vn<CR>", { desc = desc("Run closest test") })
-    vim.keymap.set("n", "<leader>tf", ":GoTestFile -v<CR>", { desc = desc("Run tests in current file") })
-    vim.keymap.set("n", "<leader>ts", ":GoTestFunc -sv<CR>", { desc = desc("Select one test to run") })
+    vim.keymap.set("n", "<leader>gtc", ":GoTest -vn<CR>", { desc = desc("Run closest test") })
+    vim.keymap.set("n", "<leader>gtf", ":GoTestFile -v<CR>", { desc = desc("Run tests in current file") })
+    vim.keymap.set("n", "<leader>gts", ":GoTestFunc -sv<CR>", { desc = desc("Select one test to run") })
     vim.keymap.set("n", "<leader>gol", ":GoLint<CR>", { desc = desc("Run Lint") })
     vim.keymap.set("n", "<leader>goc", ":lua require('go.comment').gen()<CR>", { desc = desc("Generate comment") })
   end,
