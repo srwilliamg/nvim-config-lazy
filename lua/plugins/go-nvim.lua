@@ -3,13 +3,8 @@ local desc = Utils.plugin_keymap_desc("go.nvim")
 return {
   "ray-x/go.nvim",
   enabled = not vim.g.vscode,
-  dependencies = { -- optional packages
-    "ray-x/guihua.lua",
-    "neovim/nvim-lspconfig",
-    "nvim-treesitter/nvim-treesitter",
-  },
+  dependencies = { "ray-x/guihua.lua", "neovim/nvim-lspconfig", "nvim-treesitter/nvim-treesitter" },
   opts = {
-
     disable_defaults = false, -- true|false when true set false to all boolean settings and replace all tables
     remap_commands = {}, -- Vim commands to remap or disable, e.g. `{ GoFmt = "GoFormat", GoDoc = false }`
     -- settings with {}; string will be set to ''. user need to setup ALL the settings
@@ -25,8 +20,7 @@ return {
     gotests_template_dir = "", -- sets gotests -template_dir parameter (check gotests for details)
     gotest_case_exact_match = true, -- true: run test with ^Testname$, false: run test with TestName
     comment_placeholder = "", -- comment_placeholder your cool placeholder e.g. 󰟓       
-    icons = { breakpoint = "🧘", currentpos = "🏃" }, -- setup to `false` to disable icons setup
-    verbose = false, -- output loginf in messages
+    verbose = true, -- output loginf in messages
     lsp_semantic_highlights = false, -- use highlights from gopls, disable by default as gopls/nvim not compatible
     lsp_cfg = false, -- true: use non-default gopls setup specified in go/lsp.lua
     -- false: do nothing
